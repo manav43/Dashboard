@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX MOTORS — Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">APEX<span>.</span>MOTORS</div>
+    <div class="logo-sub">Command Center v2.4</div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-label">Core</div>
+    <div class="nav-item active">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor"/>
+        <rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
+        <rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
+        <rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
+      </svg>
+      Dashboard
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 11L4.5 5H11.5L14 11H2Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <circle cx="4.5" cy="12.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="11.5" cy="12.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M1 8H15" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+      </svg>
+      Inventory
+      <span class="badge">142</span>
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1L10 6H15L11 9.5L12.5 14.5L8 11.5L3.5 14.5L5 9.5L1 6H6L8 1Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+      </svg>
+      Sales
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="5" r="3" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M2 14C2 11.2 4.7 9 8 9C11.3 9 14 11.2 14 14" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      Customers
+    </div>
+
+    <div class="nav-label">Finance</div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="4" width="14" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M5 4V3C5 2.4 5.4 2 6 2H10C10.6 2 11 2.4 11 3V4" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M1 8H15" stroke="currentColor" stroke-width="1"/>
+        <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+      </svg>
+      Finance
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 14V6L8 2L14 6V14" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="6" y="10" width="4" height="4" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      Reports
+    </div>
+
+    <div class="nav-label">Service</div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2C4.7 2 2 4.7 2 8C2 11.3 4.7 14 8 14C11.3 14 14 11.3 14 8" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M11 2L14 2L14 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M14 2L10 6" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      Test Drives
+      <span class="badge">3</span>
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 8C3 5.2 5.2 3 8 3C10.8 3 13 5.2 13 8C13 10.8 10.8 13 8 13" stroke="currentColor" stroke-width="1.3"/>
+        <path d="M1 11L4 13L4 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Leads
+    </div>
+    <div class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M8 5V8.5L10.5 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      Service Bays
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-card">
+      <div class="avatar">RK</div>
+      <div class="user-info">
+        <div class="user-name">Rajiv Kapoor</div>
+        <div class="user-role">General Manager</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1>DASHBOARD</h1>
+      <p id="curr-date">— —</p>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-pill">
+        <div class="live-dot"></div>
+        Live
+      </div>
+      <div class="topbar-pill">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1Z" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M8 4V8.5L10.5 10.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <span id="curr-time">—</span>
+      </div>
+      <div class="topbar-pill">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8C3 5.2 5.2 3 8 3C10.8 3 13 5.2 13 8C13 10.8 10.8 13 8 13" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M1 11L4 13L4 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Export
+      </div>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-top">
+        <div class="kpi-label">Monthly Revenue</div>
+        <div class="kpi-icon">₹</div>
+      </div>
+      <div class="kpi-value">4.2<span>Cr</span></div>
+      <div class="kpi-delta up">▲ 12.4% vs last month</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-top">
+        <div class="kpi-label">Units Sold</div>
+        <div class="kpi-icon">🚗</div>
+      </div>
+      <div class="kpi-value">38<span> cars</span></div>
+      <div class="kpi-delta up">▲ 7 more than Oct</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-top">
+        <div class="kpi-label">Live Inventory</div>
+        <div class="kpi-icon">📦</div>
+      </div>
+      <div class="kpi-value">142<span> units</span></div>
+      <div class="kpi-delta down">▼ 6 units critical</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-top">
+        <div class="kpi-label">Test Drives Today</div>
+        <div class="kpi-icon">🔑</div>
+      </div>
+      <div class="kpi-value">11<span> booked</span></div>
+      <div class="kpi-delta up">▲ 3 walk-ins</div>
+    </div>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="grid-row col-3-2 section">
+    <!-- Sales Chart -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">SALES TREND</div>
+        <div class="tabs">
+          <div class="tab active">7D</div>
+          <div class="tab">1M</div>
+          <div class="tab">YTD</div>
+        </div>
+      </div>
+      <div class="chart-area">
+        <svg class="chart-svg" viewBox="0 0 580 170" preserveAspectRatio="none">
+          <line x1="0" y1="170" x2="580" y2="170" stroke="#1e1e24" stroke-width="1"/>
+          <line x1="0" y1="127" x2="580" y2="127" stroke="#1e1e24" stroke-width="1"/>
+          <line x1="0" y1="85" x2="580" y2="85" stroke="#1e1e24" stroke-width="1"/>
+          <line x1="0" y1="42" x2="580" y2="42" stroke="#1e1e24" stroke-width="1"/>
+          <line x1="0" y1="0" x2="580" y2="0" stroke="#1e1e24" stroke-width="1"/>
+          <path d="M0,120 L83,105 L166,115 L249,90 L332,100 L415,80 L498,95 L580,75 L580,170 L0,170 Z" fill="#888895" opacity="0.06"/>
+          <path d="M0,120 L83,105 L166,115 L249,90 L332,100 L415,80 L498,95 L580,75" fill="none" stroke="#44444f" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path class="chart-area-fill" d="M0,110 L83,88 L166,100 L249,60 L332,75 L415,45 L498,62 L580,30 L580,170 L0,170 Z" fill="url(#goldGrad)"/>
+          <path class="chart-line" d="M0,110 L83,88 L166,100 L249,60 L332,75 L415,45 L498,62 L580,30" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+          <circle cx="0" cy="110" r="3.5" fill="#c9a84c"/>
+          <circle cx="83" cy="88" r="3.5" fill="#c9a84c"/>
+          <circle cx="166" cy="100" r="3.5" fill="#c9a84c"/>
+          <circle cx="249" cy="60" r="5" fill="#c9a84c"/>
+          <circle cx="332" cy="75" r="3.5" fill="#c9a84c"/>
+          <circle cx="415" cy="45" r="3.5" fill="#c9a84c"/>
+          <circle cx="498" cy="62" r="3.5" fill="#c9a84c"/>
+          <circle cx="580" cy="30" r="4" fill="#e8c96a"/>
+          <line x1="249" y1="60" x2="249" y2="170" stroke="#c9a84c" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+          <text x="0" y="185" font-family="Space Mono" font-size="9" fill="#44444f">MON</text>
+          <text x="77" y="185" font-family="Space Mono" font-size="9" fill="#44444f">TUE</text>
+          <text x="160" y="185" font-family="Space Mono" font-size="9" fill="#44444f">WED</text>
+          <text x="242" y="185" font-family="Space Mono" font-size="9" fill="#c9a84c">THU</text>
+          <text x="325" y="185" font-family="Space Mono" font-size="9" fill="#44444f">FRI</text>
+          <text x="408" y="185" font-family="Space Mono" font-size="9" fill="#44444f">SAT</text>
+          <text x="492" y="185" font-family="Space Mono" font-size="9" fill="#44444f">SUN</text>
+          <defs>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c9a84c"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Category Donut + Targets -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">STOCK BY CATEGORY</div>
+        <div class="panel-action">Details →</div>
+      </div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" width="110" height="110" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="40" fill="none" stroke="#c9a84c" stroke-width="14" stroke-dasharray="95.2 155.8" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
+          <circle cx="55" cy="55" r="40" fill="none" stroke="#5b8ee6" stroke-width="14" stroke-dasharray="70.1 180.9" stroke-dashoffset="-95.2" transform="rotate(-90 55 55)"/>
+          <circle cx="55" cy="55" r="40" fill="none" stroke="#4caf82" stroke-width="14" stroke-dasharray="45.2 205.8" stroke-dashoffset="-165.3" transform="rotate(-90 55 55)"/>
+          <circle cx="55" cy="55" r="40" fill="none" stroke="#e05252" stroke-width="14" stroke-dasharray="40.2 210.8" stroke-dashoffset="-210.5" transform="rotate(-90 55 55)"/>
+          <circle cx="55" cy="55" r="30" fill="#111114"/>
+          <text x="55" y="50" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="20" fill="#f0ede8">142</text>
+          <text x="55" y="62" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#44444f">UNITS</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#c9a84c"></div>
+            <div class="legend-label">SUV / MUV</div>
+            <div class="legend-pct">38%</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#5b8ee6"></div>
+            <div class="legend-label">Sedan</div>
+            <div class="legend-pct">28%</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#4caf82"></div>
+            <div class="legend-label">Hatchback</div>
+            <div class="legend-pct">18%</div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#e05252"></div>
+            <div class="legend-label">Luxury</div>
+            <div class="legend-pct">16%</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-header">
+        <div class="panel-title">MONTHLY TARGETS</div>
+        <div class="panel-action">Nov Progress</div>
+      </div>
+      <div class="target-list">
+        <div class="target-item">
+          <div class="target-row">
+            <div class="target-name">Revenue Target</div>
+            <div class="target-nums">₹4.2Cr / ₹5Cr</div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" id="prog1" style="width:0%; background: var(--gold);"></div></div>
+        </div>
+        <div class="target-item">
+          <div class="target-row">
+            <div class="target-name">Units Sold</div>
+            <div class="target-nums">38 / 50</div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" id="prog2" style="width:0%; background: var(--blue);"></div></div>
+        </div>
+        <div class="target-item">
+          <div class="target-row">
+            <div class="target-name">Test Drives</div>
+            <div class="target-nums">67 / 80</div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" id="prog3" style="width:0%; background: var(--green);"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="grid-row col-3-2 section">
+    <!-- Inventory Table -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">INVENTORY SNAPSHOT</div>
+        <div class="panel-action">View All →</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Variant</th>
+              <th>Year</th>
+              <th>Colour</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Days on Lot</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="car-name">Tata Nexon EV</span></td>
+              <td>Max LR</td><td>2024</td><td>Daytona Grey</td>
+              <td class="price">₹19.5L</td>
+              <td><span class="stock-badge in">IN STOCK</span></td><td>3</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">Hyundai Creta</span></td>
+              <td>SX(O) Diesel</td><td>2024</td><td>Abyss Black</td>
+              <td class="price">₹20.1L</td>
+              <td><span class="stock-badge in">IN STOCK</span></td><td>7</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">Mahindra XEV 9e</span></td>
+              <td>Pack Three</td><td>2025</td><td>Stealth White</td>
+              <td class="price">₹35.9L</td>
+              <td><span class="stock-badge low">LOW (2)</span></td><td>12</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">Maruti Baleno</span></td>
+              <td>Alpha Turbo</td><td>2024</td><td>Splendid Silver</td>
+              <td class="price">₹10.3L</td>
+              <td><span class="stock-badge in">IN STOCK</span></td><td>21</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">BMW 3 Series</span></td>
+              <td>320Ld Sport</td><td>2024</td><td>Mineral White</td>
+              <td class="price">₹58.0L</td>
+              <td><span class="stock-badge low">LOW (1)</span></td><td>18</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">Toyota Innova HyCross</span></td>
+              <td>GX(O) Hybrid</td><td>2024</td><td>Super White</td>
+              <td class="price">₹26.7L</td>
+              <td><span class="stock-badge out">SOLD OUT</span></td><td>—</td>
+            </tr>
+            <tr>
+              <td><span class="car-name">Kia Seltos</span></td>
+              <td>HTX+ Turbo DCT</td><td>2024</td><td>Aurora Black</td>
+              <td class="price">₹18.4L</td>
+              <td><span class="stock-badge in">IN STOCK</span></td><td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Activity Feed -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">LIVE ACTIVITY</div>
+        <div class="live-dot"></div>
+      </div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--green)"></div>
+          <div class="activity-text">
+            <div class="activity-title">Sale confirmed — Hyundai Creta SX(O)</div>
+            <div class="activity-sub">Customer: Priya Sharma · ₹20.1L cash</div>
+          </div>
+          <div class="activity-time">2m ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--blue)"></div>
+          <div class="activity-text">
+            <div class="activity-title">Test drive completed — BMW 3 Series</div>
+            <div class="activity-sub">Salesperson: Arjun Mehta</div>
+          </div>
+          <div class="activity-time">18m ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--gold)"></div>
+          <div class="activity-text">
+            <div class="activity-title">New lead — Mahindra XEV 9e inquiry</div>
+            <div class="activity-sub">Source: Website · Vikram Nair</div>
+          </div>
+          <div class="activity-time">34m ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--red)"></div>
+          <div class="activity-text">
+            <div class="activity-title">Stock alert — Innova HyCross sold out</div>
+            <div class="activity-sub">Reorder request sent to Toyota India</div>
+          </div>
+          <div class="activity-time">1h ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--green)"></div>
+          <div class="activity-text">
+            <div class="activity-title">Sale confirmed — Tata Nexon EV Max</div>
+            <div class="activity-sub">Customer: Rohit Verma · ₹19.5L finance</div>
+          </div>
+          <div class="activity-time">2h ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--blue)"></div>
+          <div class="activity-text">
+            <div class="activity-title">10 new vehicles added to inventory</div>
+            <div class="activity-sub">Kia Seltos batch — lot 7B</div>
+          </div>
+          <div class="activity-time">3h ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot" style="background: var(--gold)"></div>
+          <div class="activity-text">
+            <div class="activity-title">Insurance renewal — 4 units due</div>
+            <div class="activity-sub">Action required by Nov 30</div>
+          </div>
+          <div class="activity-time">Yesterday</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="grid-row col-2-2 section">
+    <!-- Top Salespeople -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">TOP SALESPEOPLE</div>
+        <div class="panel-action">Nov 2024</div>
+      </div>
+      <div class="seller-list">
+        <div class="seller-item">
+          <div class="seller-rank top">1</div>
+          <div class="seller-av" style="background: rgba(201,168,76,0.15); color: #c9a84c;">AK</div>
+          <div class="seller-info">
+            <div class="seller-name">Arjun Kumar</div>
+            <div class="seller-cars">12 units · 3 test drives today</div>
+          </div>
+          <div class="seller-rev">₹1.04Cr</div>
+        </div>
+        <div class="seller-item">
+          <div class="seller-rank top">2</div>
+          <div class="seller-av" style="background: rgba(91,142,230,0.15); color: #5b8ee6;">SM</div>
+          <div class="seller-info">
+            <div class="seller-name">Sneha Malhotra</div>
+            <div class="seller-cars">9 units · 1 luxury sale</div>
+          </div>
+          <div class="seller-rev">₹92L</div>
+        </div>
+        <div class="seller-item">
+          <div class="seller-rank">3</div>
+          <div class="seller-av" style="background: rgba(76,175,130,0.12); color: #4caf82;">RD</div>
+          <div class="seller-info">
+            <div class="seller-name">Ravi Dubey</div>
+            <div class="seller-cars">8 units · high conversions</div>
+          </div>
+          <div class="seller-rev">₹78L</div>
+        </div>
+        <div class="seller-item">
+          <div class="seller-rank">4</div>
+          <div class="seller-av" style="background: rgba(224,82,82,0.12); color: #e05252;">NB</div>
+          <div class="seller-info">
+            <div class="seller-name">Nisha Bhatia</div>
+            <div class="seller-cars">6 units · top in hatchbacks</div>
+          </div>
+          <div class="seller-rev">₹51L</div>
+        </div>
+        <div class="seller-item">
+          <div class="seller-rank">5</div>
+          <div class="seller-av" style="background: rgba(201,168,76,0.08); color: #888895;">PT</div>
+          <div class="seller-info">
+            <div class="seller-name">Pranav Tiwari</div>
+            <div class="seller-cars">3 units · joined this month</div>
+          </div>
+          <div class="seller-rev">₹24L</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's Test Drives -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">TODAY'S TEST DRIVES</div>
+        <div class="panel-action">Schedule View →</div>
+      </div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="time-slot done">10:00<br>AM</div>
+          <div class="activity-text">
+            <div class="activity-title">Deepak Joshi — Mahindra XEV 9e</div>
+            <div class="activity-sub">Salesperson: Arjun Kumar · Bay 2</div>
+          </div>
+          <span class="stock-badge in">DONE</span>
+        </div>
+        <div class="activity-item">
+          <div class="time-slot done">11:30<br>AM</div>
+          <div class="activity-text">
+            <div class="activity-title">Kavya Iyer — BMW 3 Series 320Ld</div>
+            <div class="activity-sub">Salesperson: Sneha Malhotra · Bay 1</div>
+          </div>
+          <span class="stock-badge in">DONE</span>
+        </div>
+        <div class="activity-item">
+          <div class="time-slot upcoming">2:00<br>PM</div>
+          <div class="activity-text">
+            <div class="activity-title">Sanjay Gupta — Tata Nexon EV Max</div>
+            <div class="activity-sub">Salesperson: Ravi Dubey · Bay 3</div>
+          </div>
+          <span class="stock-badge low">UPCOMING</span>
+        </div>
+        <div class="activity-item">
+          <div class="time-slot upcoming">3:30<br>PM</div>
+          <div class="activity-text">
+            <div class="activity-title">Meera Nair — Hyundai Creta SX(O)</div>
+            <div class="activity-sub">Salesperson: Nisha Bhatia · Bay 2</div>
+          </div>
+          <span class="stock-badge low">UPCOMING</span>
+        </div>
+        <div class="activity-item">
+          <div class="time-slot unassigned">5:00<br>PM</div>
+          <div class="activity-text">
+            <div class="activity-title">Walk-in (3 customers) — Kia Seltos</div>
+            <div class="activity-sub">Unassigned · Please assign</div>
+          </div>
+          <span class="stock-badge out">UNASSIGNED</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
